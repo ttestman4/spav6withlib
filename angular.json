@@ -170,8 +170,5 @@
       }
     }
   },
-  "defaultProject": "spa",
-  // "cli": {
-  //   "defaultCollection": "@ngrx/schematics"
-  // }
+  "defaultProject": "spa"
 }
