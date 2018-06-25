@@ -23,6 +23,16 @@
       "non-functional/*": [
         "dist/non-functional/*"
       ]
-    }
+    },
+    // Custom Options
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "removeComments": true,
+    // "strictNullChecks": true
   }
 }
