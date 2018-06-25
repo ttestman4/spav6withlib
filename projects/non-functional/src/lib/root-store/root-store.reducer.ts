@@ -12,10 +12,10 @@ import { environment } from '../../environments/environment';
 import { storeFreeze } from 'ngrx-store-freeze';
 
 export interface State {
-  name: string
+  name: string;
 }
 
-const initialState: string = 'Root Store';
+const initialState = 'Root Store';
 
 
 export function reducer(

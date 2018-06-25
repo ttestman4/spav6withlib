@@ -5,15 +5,14 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:non-functional": "yarn run build non-functional && yarn",
-    "build:release": "yarn run build:non-functional && yarn run build",
+    "build:release": "for proj in non-functional spa; do yarn run build $proj && yarn upgrade $proj; done ",
     "test": "ng test",
-    "test:non-functional": "yarn run test non-functional",
-    "test:spa": "yarn run test spa",
-    "test:all": "concurrently \"yarn run test:non-functional\" \"yarn run test:spa\" ",
-    "test:release": "yarn run test:non-functional --watch=false && yarn run test:spa --watch=false",
+    "test:release": "for proj in non-functional spa; do yarn run test $proj --watch=false; done",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint:fix": "for proj in non-functional spa; do yarn run lint $proj --fix; done",
+    "lint:all": "for proj in non-functional spa; do yarn run lint $proj; done",
+    "e2e": "ng e2e",
+    "dist": "yarn run lint:all && yarn run test:release && yarn run e2e && yarn run build:release "
   },
   "private": true,
   "dependencies": {
