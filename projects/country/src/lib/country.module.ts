@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
+import { CountryStoreModule } from './country-store/country-store.module';
 
 @NgModule({
-  imports: [],
+  imports: [CountryStoreModule],
   declarations: [],
   exports: []
 })
